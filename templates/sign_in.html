@@ -2,17 +2,17 @@
 {% block title %} Sign in {% endblock %}
 {% block body %}
 <nav>
-    <li class="sign_in"><a href="#">Sign up</a></li>
+    <a class="sign_in" href="/sign_up">Sign up</a>
 </nav>
-<div id="sign_in">
+<div class="sign">
     <form method="POST" action="#">
         <div id="username">
-        <label for="Username/Email">Username/Email: </label>
-        <input class="userpass" name="username_email" placeholder="Username/Email" type="text"/>
+            <label for="Username/Email" class="block_label">Username/Email: </label>
+            <input class="userpass" name="username_email" placeholder="Username/Email" type="text"/>
         </div>
         <div id="password">
-        <label for="password">Password: </label>
-        <input class="userpass" name="password" placeholder="password" type="password"/>
+            <label for="password" class="block_label">Password: </label>
+            <input class="userpass" name="password" placeholder="password" type="password"/>
         </div>
         <input class="login" type="Submit" value="Sign in">
     </form>

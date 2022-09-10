@@ -1,0 +1,133 @@
+body {
+    margin: 0 auto;
+    /**background-color:ghostwhite;**/
+    background-color: #f3faf7f2;
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#root_page_layout {
+    position: relative;
+    top:50px;
+    margin-left: 10%;
+}
+
+h2.rext_welcome {
+    position: relative;
+    font-size: 50px;
+    margin: 0 0;
+    margin-left: 100px;
+}
+
+.root_page_layout {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    font-size: 500px;
+    height: 100%;
+    width: 100%;
+    margin: 0 0;
+}
+
+nav {
+    float: right;
+    width: 100%;
+    margin: 10px;
+    height: 100px;
+}
+
+.sign_in {
+    float: right;
+    background-color: rgb(5 155 9 / 88%);
+    list-style-type: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+.sign_in:hover{
+    padding: 15px 25px;
+    text-decoration: underline;
+}
+
+
+.sign_in a {
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+.sign {
+    background: -webkit-linear-gradient(left, rgb(5 155 9 / 88%), rgb(6, 107, 26), rgb(5 155 9 / 88%));
+    width: 40%;
+    height: 40%;
+    border-radius: 20px;
+    padding: 25px;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    color:#f3faf7f2;
+}
+
+
+div .block_label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    display: block;
+    background-color: #f3faf7f2;
+    border: none;
+    height: 30px;
+    width: 500px;
+    border-radius: 7px;
+    outline: none;
+    padding: 3px;
+}
+
+.userpass:hover {
+    border: 2px solid #f3faf7f2;
+    height: 26px;
+    width: 496px;
+}
+
+.login {
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    float: right;
+    margin: 5px;
+}
+
+.login:hover {
+    margin-top: 3px;
+    margin-right: 3px;
+    width: 155px;
+    height: 45px;
+    font-size: 15px;
+    cursor:pointer;
+}
+
+form {
+    margin: 50px;
+    padding: 15px;
+}
+
+#username, #password {
+    margin-bottom: 50px;
+}
+
+.sign_up {
+    height: 80%;
+    top: 10%;
+}
+
+.repeatpass {
+    margin-top: 50px;
+}
+
+.permissions {
+    display: block;
+}
