@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash
 from database.models import setup
-from auth import check_login
+from auth import check_login, valsave_credentials
 
 app = Flask(__name__)
-"""setup(app)"""
+setup(app)
 
 
 #Route handler for the sign in page
@@ -13,9 +13,13 @@ def sign_in():
         check_login()
     return render_template("sign_in.html")
 
-@app.route("/sign_up")
+@app.route("/sign_up", methods=["GET","POST"])
 def sign_up():
-    return render_template("sign_up.html")
+    if request.method == "POST":
+        check_login()
+        flash("You're Registered!")
+        redirect(url_for("root"))
+    return render_template("sign_up.html", range=range, permissions=["sell:books", "read:books"])
 
 #Handler for the root page
 @app.route("/")

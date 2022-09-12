@@ -67,6 +67,7 @@ nav {
   bottom: 25%;
   left: 25%;
   color: rgba(243, 250, 247, 0.9490196078);
+  letter-spacing: 0.8px;
 }
 
 div .block_label {
@@ -75,7 +76,6 @@ div .block_label {
 }
 
 input {
-  display: block;
   background-color: rgba(243, 250, 247, 0.9490196078);
   border: none;
   height: 30px;
@@ -83,6 +83,10 @@ input {
   border-radius: 7px;
   outline: none;
   padding: 3px;
+}
+
+.userpass {
+  display: block;
 }
 
 .userpass:hover {
@@ -128,6 +132,17 @@ form {
 
 .permissions {
   display: block;
+}
+
+.permissions1 {
+  margin-top: 30px;
+}
+
+.input_perm {
+  display: inline;
+  position: relative;
+  top: -25px;
+  left: -100px;
 }
 
 /*# sourceMappingURL=style.css.map */
