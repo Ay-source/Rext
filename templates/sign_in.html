@@ -8,11 +8,13 @@
     <form method="POST" action="#">
         <div id="username">
             <label for="Username/Email" class="block_label">Username/Email: </label>
-            <input required class="userpass" name="username_email" placeholder="Username/Email" type="text"/>
+            <!--<input required class="userpass" name="useremail" placeholder="Username/Email" type="text"/>-->
+            {{ form.useremail(class_ = 'userpass', placeholder='Username/Email') }}
         </div>
         <div id="password">
             <label for="password" class="block_label">Password: </label>
-            <input required class="userpass" name="password" placeholder="password" type="password"/>
+            <!--<input required class="userpass" name="password" placeholder="password" type="password"/>-->
+            {{ form.password(class_ = 'userpass', placeholder='password') }}
         </div>
         <input class="login" type="Submit" value="Sign in">
     </form>

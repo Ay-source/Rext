@@ -8,20 +8,22 @@
     <form method="POST" action="#">
         <div id="username">
             <label for="Username/Email" class="block_label">Username/Email: </label>
-            <input required class="userpass" name="username_email" placeholder="Username/Email" type="text"/>
+            {{ form.useremail(class_ = 'userpass', placeholder='Username/Email') }}
         </div>
         <div id="password">
             <label for="password" class="block_label">Password: </label>
-            <input required class="userpass" name="password" placeholder="password" type="password"/>
+            {{ form.password(class_ = 'userpass', placeholder='password') }}
             <label class="repeatpass block_label" for="password">Confirm Password: </label>
-            <input required class="userpass" name="password2" placeholder="password" type="password"/>
+            {{ form.password_repeat(class_ = 'userpass', placeholder='password') }}
         </div>
         <div>
-            <label for="checkbox" class="block_label">What do you need rext for:</label>
-            <label for="checkbox" required class="permissions permissions1">Share books</label>
-            <input class="input_perm" name="permission" type="radio" value="sell:books" placeholder="">
-            <label for="checkbox" class="permissions">Read books</label>
-            <input class="input_perm" required name="permission" type="radio" value="read:books" placeholder="">
+            <label for="checkbox" class="block_label">Register as a:</label>
+            {% for subfield in form.permission %}
+                <tr>
+                    <label for="radio" required class="permissions permissions1">{{ subfield.label }}</label>
+                    <td>{{ subfield(class_='input_perm') }}</td>
+                </tr>
+            {% endfor %}
         </div>
         <input class="login" type="Submit" value="Sign up">
     </form>

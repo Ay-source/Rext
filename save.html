@@ -1,0 +1,8 @@
+<input class="input_perm" required name="permission" type="radio" value="read:books" placeholder="">
+<input class="input_perm" name="permission" type="radio" value="sell:books" placeholder="">
+
+
+<label for="radio" required class="permissions permissions1">Share books</label>
+            {{ form.sell_books(class_ = 'input_perm') }}
+            <label for="radio" class="permissions">Read books</label>
+{{ form.read_books(class_ = 'input_perm', required = true) }}
