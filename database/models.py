@@ -17,6 +17,7 @@ class Books(db.Model):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False, unique=True)
     author = Column(String, nullable=False, unique=True)
+    description = Column(String)
 
 
 class User(db.Model):

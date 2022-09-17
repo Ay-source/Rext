@@ -4,6 +4,11 @@
 <nav>
     <a class="sign_in" href="/sign_up">Sign up</a>
 </nav>
+<div class="division1">
+    {% for message in get_flashed_messages() %}
+        <h2 class="flash1">{{ message }}</h2>
+    {% endfor %}
+</div>
 <div class="sign">
     <form method="POST" action="#">
         <div id="username">

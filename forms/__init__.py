@@ -22,15 +22,19 @@ def username_valid(username):
 class User(Form):
     useremail = StringField("useremail", validators=[DataRequired()])
     password = PasswordField("password", validators=[DataRequired()])
-    password_repeat = PasswordField("password1", validators=[DataRequired()])
-    permission = RadioField("permission", validators=[DataRequired()], 
+    password_repeat = PasswordField("password1")
+    permission = RadioField("permission", 
     choices=[("post:books", "creator"),
             ("get:books", "reader")])
 
-    def validate(self):
+    def validate(self, jump=False):
         if not username_valid(self.useremail.data):
             return False
+        if jump:
+            return True
         if str(self.permission.data).lower() not in ["post:books", "get:books"]:
+            return False
+        if not self.password_repeat:
             return False
         self.permission.data = str(self.permission.data).split()
         return True

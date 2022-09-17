@@ -18,3 +18,5 @@ database_path = f"postgresql://{username}:{password}@{host}/{database_name}"
 
 SQLALCHEMY_DATABASE_URI = database_path
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+SESSION_PERMANENT=False
+SESSION_TYPE="filesystem"

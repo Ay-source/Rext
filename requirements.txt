@@ -6,3 +6,4 @@ sqlalchemy
 bcrypt
 psycopg2
 flask-wtf
+flask-session

@@ -47,8 +47,7 @@ nav {
 }
 
 .sign_in:hover {
-  padding: 15px 25px;
-  text-decoration: underline;
+  padding: 15px 21px;
 }
 
 .sign_in a {
@@ -62,7 +61,7 @@ nav {
   height: 40%;
   border-radius: 20px;
   padding: 25px;
-  position: fixed;
+  position: absolute;
   top: 25%;
   bottom: 25%;
   left: 25%;
@@ -143,6 +142,24 @@ form {
   position: relative;
   top: -25px;
   left: -100px;
+}
+
+.navigate1 {
+  margin-left: 10px;
+}
+
+.division1 {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+.flash1 {
+  background-color: aquamarine;
+  color: black;
+  border-radius: 10px;
+  width: 100%;
+  padding: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

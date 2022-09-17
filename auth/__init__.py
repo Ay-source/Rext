@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def check_login(form, request):
+def check_login(form, request, jump=False):
     """Validates the login username and data"""
     """username = request.form.get("username_email")
 
@@ -13,8 +13,13 @@ def check_login(form, request):
     userval = re.compile("\W+|_")
     match = re.search(username)"""
 
-    if not form.validate():
-        return False, False, False
+    if jump:
+        if not form.validate(True):
+            return False, False, False
+
+    if not jump:
+        if not form.validate():
+            return False, False, False
 
     password = request.form.get("password")
 
@@ -28,7 +33,7 @@ def check_login(form, request):
     salt = bytes(os.getenv("salt"), encoding="utf-8")
     hashed = bcrypt.hashpw(password, salt)
 
-    return (form.useremail.data, hashed, form.permission.data)
+    return (form.useremail.data, hashed.decode("utf-8"), form.permission.data)
 
 def valsave_credentials():
     pass
