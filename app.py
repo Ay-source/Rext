@@ -38,7 +38,7 @@ def sign_in():
 def post_sign_in():
     #Form Validation
     form = User(request.form)
-    username, password, permission = check_login(form, request, True)
+    username, password = check_login(form, request, True)
     
     #Check if password matches with database password
     user = Users.query.filter_by(username=username).one_or_none()
@@ -62,16 +62,15 @@ def sign_up():
     if state:
         flash("You are logged in.")
         return redirect(url_for("home"))
-    return render_template("sign_up.html", range=range, permissions=["sell:books", "read:books"], form=form)
+    return render_template("sign_up.html", range=range, form=form)
 
 @app.route("/sign_up", methods=["POST"])
 def post_sign_up():
     form = User(request.form)
-    username, password, permission = check_login(form, request)
+    username, password = check_login(form, request)
     new_user = Users(
         username = username,
         password = password,
-        permission = permission
     )
     try:
         new_user.add()

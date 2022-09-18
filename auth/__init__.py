@@ -15,11 +15,11 @@ def check_login(form, request, jump=False):
 
     if jump:
         if not form.validate(True):
-            return False, False, False
+            return False, False
 
     if not jump:
         if not form.validate():
-            return False, False, False
+            return False, False
 
     password = request.form.get("password")
 
@@ -33,7 +33,7 @@ def check_login(form, request, jump=False):
     salt = bytes(os.getenv("salt"), encoding="utf-8")
     hashed = bcrypt.hashpw(password, salt)
 
-    return (form.useremail.data, hashed.decode("utf-8"), form.permission.data)
+    return (form.useremail.data.capitalize(), hashed.decode("utf-8"))
 
 def valsave_credentials():
     pass
