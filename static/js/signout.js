@@ -20,8 +20,6 @@ if (form)
     form.onsubmit = function(e) {
         var pass = document.getElementsByName("password")[0].value
         var pass_rep = document.getElementsByName("password_repeat")[0].value
-        console.log(pass)
-        console.log(pass_rep)
         if (pass != pass_rep){
             e.preventDefault()
             console.log("never")
