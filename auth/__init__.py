@@ -31,7 +31,6 @@ def check_login(form, request, jump=False):
     #using bcrypt to hash the password
     password = bytes(request.form.get("password"), encoding="utf-8")
     salt = bytes(os.getenv("salt"), encoding="utf-8")
-    print(salt)
     hashed = bcrypt.hashpw(password, salt)
 
     return (form.useremail.data.capitalize(), hashed.decode("utf-8"))
