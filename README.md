@@ -60,7 +60,6 @@ flask db upgrade
 4. type `flask run` into the terminal/commandline
 
 ## Structure
-"""
 
 Rext
 
@@ -77,5 +76,3 @@ Rext
     forms
         |
         __init__.py
-
-"""
