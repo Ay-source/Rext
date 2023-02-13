@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %} Home Page {% endblock %}
+{% block body %}
+<nav class="navigate2">
+    <a class="sign_in navigate1" id="signout" href="/sign_out">Sign out</a>
+    <a class="sign_in navigate1" href="/sign_in">My Books</a>
+    <a class="sign_in navigate1" href="/home">Profile</a>
+</nav>
+<div class="division1">
+    {% for message in get_flashed_messages() %}
+        <h2 class="flash1">{{ message }}</h2>
+    {% endfor %}
+</div>
+{% endblock %}

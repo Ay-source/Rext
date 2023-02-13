@@ -111,6 +111,26 @@ def sign_out():
     flash("You've been logged out.")
     return redirect(url_for("root"))
 
+@app.route("/suggested_books")
+def sign_out():
+    #Check if user session exists
+    state = check_session()
+    if not state:
+        flash("You are not logged in.")
+        return redirect(url_for("sign_in"))
+
+    return render_template("suggested_books.html")
+
+@app.route("/my_books")
+def sign_out():
+    #Check if user session exists
+    state = check_session()
+    if not state:
+        flash("You are not logged in.")
+        return redirect(url_for("sign_in"))
+
+    return render_template("my_books.html")
+
 """
 #Handler for the profile page
 @app.route()
