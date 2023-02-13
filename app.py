@@ -112,7 +112,7 @@ def sign_out():
     return redirect(url_for("root"))
 
 @app.route("/suggested_books")
-def sign_out():
+def suggested_books():
     #Check if user session exists
     state = check_session()
     if not state:
@@ -122,7 +122,7 @@ def sign_out():
     return render_template("suggested_books.html")
 
 @app.route("/my_books")
-def sign_out():
+def my_boooks():
     #Check if user session exists
     state = check_session()
     if not state:
