@@ -15,21 +15,21 @@ Installation steps:
 2. Install the requirements. 
 
     `python -m pip install -r requirements.txt`
-3. set the following environment variables in:
+3. set the following environment variables for:
 
-    For terminal:
+    Terminal:
 
             `export FLASK_APP=app.py`
 
             `export FLASK_DEBUG=app.py`
 
-    For command line:
+    Command line:
 
             `set FLASK_APP=app.py`
     
             `set FLASK_DEBUG=app.py`
 
-4. Run python in the terminal/command line general and generate hash for step 5.
+4. Run python in the terminal/command line general and generate salt for step 5.
 ```
 $ python
 Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
@@ -42,11 +42,11 @@ b'$2b$12$Nrk2pgnWfbqIdHCK4GqRRO'
 
 5. Create a file called .env in the root of the cloned repo. It should contain:
 ```
-    dbusername=postgres
-    dbpassword=postgres
-    database_name=Rext
+    dbusername=username
+    dbpassword=password
+    database_name=database
     host=127.0.0.1:5432
-    salt=$2b$14$FrDHPdVQzD3wdn0kx0vDLu
+    salt=$2b$12$Nrk2pgnWfbqIdHCK4GqRRO
 ```
 6. Ensure postgres server is running and that database exists.
 
