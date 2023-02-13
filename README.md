@@ -9,9 +9,9 @@ Prerequisites:
 
 Installation steps:
 
-1. Clone the repo from github [here](https://github.com/Ay-source/Rext.git) or copy the link below
+1. Clone the repo from github [here](https://github.com/Ay-source/Rext.git) or copy the command below:
 
-    `https://github.com/Ay-source/Rext.git`
+    `git clone https://github.com/Ay-source/Rext.git`
 2. Install the requirements. 
 
     `python -m pip install -r requirements.txt`
