@@ -3,8 +3,8 @@
 {% block body %}
 <nav class="navigate2">
     <a class="sign_in navigate1" id="signout" href="/sign_out">Sign out</a>
-    <a class="sign_in navigate1" href="/suggested_books">Suggested Books</a>
     <a class="sign_in navigate1" href="/home">Profile</a>
+    <a class="sign_in navigate1" href="/suggested_books">Suggested Books</a>
 </nav>
 <div class="division1">
     {% for message in get_flashed_messages() %}
